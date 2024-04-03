@@ -1,0 +1,28 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Listings {
+  id        Int @id @default(autoincrement())
+  jsonData  Json
+}
+
+model Agents {
+  id        Int @id @default(autoincrement())
+  jsonData  Json
+}
+
+model Offices {
+  id        Int @id @default(autoincrement())
+  jsonData  Json
+}
+
+model Openhouses {
+  id        Int @id @default(autoincrement())
+  jsonData  Json
+}
